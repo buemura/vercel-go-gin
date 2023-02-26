@@ -13,6 +13,13 @@ func Ping(c *gin.Context) {
 	})
 }
 
+func Hello(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"status": "success",
+		"message": "hello world",
+	})
+}
+
 func ErrRouter(c *gin.Context) {
 	c.JSON(http.StatusBadRequest, gin.H{
 		"status": "error",

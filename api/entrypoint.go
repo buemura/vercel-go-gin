@@ -13,14 +13,15 @@ var (
 )
 
 func setupRouter(r *gin.RouterGroup) {
-	r.GET("/api/ping", handler.Ping)
+	r.GET("/ping", handler.Ping)
+	r.GET("/hello", handler.Hello)
 }
 
 func init() {
 	app = gin.New()
 	app.NoRoute(handler.ErrRouter)
 
-	router := app.Group("/")
+	router := app.Group("/api")
 	setupRouter(router)
 }
 
