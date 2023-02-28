@@ -15,6 +15,7 @@ var (
 func setupRouter(r *gin.RouterGroup) {
 	r.GET("/ping", handler.Ping)
 	r.GET("/hello", handler.Hello)
+	r.PUT("/ping", handler.Ping)
 }
 
 func init() {
